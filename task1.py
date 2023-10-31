@@ -14,9 +14,11 @@ assert btcTocad(1) == 45000
 (2 points) 
 """
 
-def btcTocad():
-    pass
+def btcTocad(a):
+    if type(a) is str:
+        return 'error'
 
+    return a * 45000
 
 """
 This checks to see if you are running the program as the main script or
@@ -26,5 +28,5 @@ are not executed.
 """
 if __name__ == "__main__":
     assert btcTocad(1) == 45000
-    assert btcTocad(2.5) == 135000
-    assert btcTocad(one) == 'error'
+    assert btcTocad(2.5) == 112500
+    assert btcTocad('one') == 'error'
